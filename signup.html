@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        #register-form{
+            background-image: linear-gradient(#08103c9b,#450a0a);
+            color: white;
+            width: 350px;
+            padding: 24px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 15px;
+        }
+        .input-label{
+            margin: 0;
+            margin-top: 10px;
+            margin-bottom: 4px;
+        }
+        .input-item{
+            width: 100%;
+        }
+        #terms-check{
+            margin-top: 12px;
+            margin-bottom: 18px;
+        }
+    </style>
+</head>
+<body style="background-color: lightblue;">
+    <h1 style="text-align: center;">Signup</h1>
+    <form id="register-form" method="get">
+        <div>
+            <p class="input-label">Fullname</p>
+            <input type="text" name="fullname" class="input-item" placeholder="Full Name" required>
+        </div>
+        <div>
+            <p class="input-label">Email</p>
+            <input type="email" name="email" class="input-item" placeholder="abc@gmail.com" required>
+        </div>
+        <div>
+            <p class="input-label">Password</p>
+            <input type="password" name="password" class="input-item" placeholder="xxxxxxxx" required minlength="8">
+        </div>
+        <div>
+            <p class="input-label">Confirm Password</p>
+            <input type="password" name="confirm-password" class="input-item"placeholder="xxxxxxxx"required minlength="8">
+        </div>
+        <div>
+            <p class="input-label">Gender</p>
+            <input type="radio" name="gender" value="male">Male</input>
+            <input type="radio" name="gender" value="female">Female</input>
+            <input type="radio" name="gender" value="other">Other</input>
+        </div>
+        <div>
+            <p class="input-label">Date of Birth</p>
+            <input type="date" name="dob" max="09-02-2024">
+        </div>
+        <div>
+            <p class="input-label">Upload profile photo</p>
+            <input type="file" name="image">
+        </div>
+        <div>
+            <p class="input-label">Security Question</p>
+            <select name="security-question" id="security-question" class="input-item">
+                <option value="first-prt-name">What was your first pet name?</option>
+                <option value="first-job">What was your first job?</option>
+                <option value="nick-name">What is your nick name?</option>
+                <option value="maiden-name">What is your mother's maiden name?</option>
+            </select>
+        </div>
+        <div>
+            <textarea name="answer-security-question" id="" cols="30" rows="2" class="input-item"></textarea>
+        </div>
+        <div>
+            <input type="checkbox" name="terms-conditions" value="accept" id="terms-check">I agree to the terms and conditions.
+        </div>
+        <input type="submit" value="Register">
+        <input type="reset" name="Reset">
+    </form>
+</body>
+</html>
